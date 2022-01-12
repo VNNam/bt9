@@ -1,0 +1,9 @@
+extends layout 
+block content
+
+  form#login(action="", method="post") 
+    label(for="username") username 
+    input#username(type="email", name="username") 
+    label(for="password") password 
+    input#password(type="password", name="password") 
+    input(type="submit", value="Log in")

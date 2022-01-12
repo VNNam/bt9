@@ -1,0 +1,10 @@
+extends layout 
+block content 
+  if(users.length)
+      each user in users
+        .item  
+          .item-title: a(href=originalUrl+'/'+user._id)  #{user.name}
+          .item-description #{user.email}
+      include includes/pagination.pug
+  else 
+    div There is no user.

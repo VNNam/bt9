@@ -1,0 +1,22 @@
+extends layout 
+block content 
+  .content
+    include includes/asidebar.pug
+    section
+      form(action="/users/"+user._id, method="post")
+        label(for="name") Name
+        input#name(type="text", name="name", value=user.name, disabled=edit)     
+        label(for="email") Email
+        input#email(type="email", name="email", value =user.email, disabled=edit)
+        label(for="birthdate") Birthday
+        input#date(type="date", name="date", value =user.born, disabled=edit)
+        label(for="address") Address
+        input#address(type="text", name="address", value= user.address, disabled=edit)
+        label(for="phone") Phone 
+        input#phone(type="text", name="phone", value=user.phone, disabled=edit)
+        select#role(name="role", disabled) 
+          if(user.role==='user')
+            option(value="user" selected) User
+          else
+            option(value="teacher" selected) Teacher
+        

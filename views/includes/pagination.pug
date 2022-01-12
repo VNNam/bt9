@@ -1,0 +1,31 @@
+
+ul(class='pagination') 
+  div.continuous page 
+  li: a(href="?page=1") |< First 
+  - previous=page-1
+  if(previous)
+    li: a(href="?page="+ previous) << Previous
+  else 
+    li: a(href="?page=1", disabled)  << Previous 
+  if(page>9)
+    li: div.continuous ......
+  if(page-8>0)
+    - n=page-8
+  else 
+    - n=1
+  - times=0
+  while times<10&&n<=pages
+    if(n==page)
+      li: a(href=originalUrl + '?page=' + n, class="selected") #{n}
+    else 
+      li: a(href=originalUrl + '?page=' + n) #{n}
+    - n++ , times++
+  if(n<pages)
+    li: div.continuous ......
+  if(page<pages)
+    - next = page
+    li: a(href="?page="+ (++next)) Next >> 
+  else 
+    li: a(href="?page="+ pages, disabled) Next >> 
+  li: a(href="?page="+ pages) Last >| 
+  

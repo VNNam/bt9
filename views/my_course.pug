@@ -1,0 +1,26 @@
+extends layout 
+block content   
+  nav 
+    a(href="/users/"+id) Back    
+  if(data.length)
+    table 
+      thead 
+        th Num.
+        th Title 
+        th Description 
+        th Open At 
+        th Score 
+        th Paid 
+      tbody 
+        - var i=page
+        each val in data  
+          tr
+            td.number #{i++}
+            td #{val.course.title}
+            td #{val.course.description}
+            td #{val.openAt}
+            td.number #{val.score}
+            td.number #{val.payment}
+    include includes/pagination.pug
+  else 
+    h3 You have not joined any course yet.

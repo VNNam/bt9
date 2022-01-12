@@ -1,0 +1,155 @@
+body {
+  padding: 50px;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+/* navigation */
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin-bottom: 50px;
+  max-height: 50px;
+}
+.logo {
+  /* display: flex; */
+  width: 100px;
+  height: 50px;
+  background-color: lightslategrey;
+  color: white;
+  font-weight: bolder;
+  font-size: x-large;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav li {
+  padding: 10px;
+  margin: 2px;
+  font-size: 12pt;
+  text-shadow: -5px 5px 8px;
+}
+nav li > a:link {
+  display: block;
+  color: darkgreen;
+  text-decoration: none;
+}
+nav li > a:active {
+  color: blueviolet;
+}
+nav li > a:hover {
+  font-size: xx-large;
+  transform: translateY(-25px);
+}
+nav li > a:visited {
+  color: darkgreen;
+}
+/* list user */
+.item {
+  display: block;
+  /* flex-flow: column; */
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin-bottom: 5px;
+  max-width: 300px;
+  background-color: lightgrey;
+}
+.item-title {
+  /* display: block; */
+  font-size: larger;
+  text-decoration: none;
+}
+.item-description {
+  /* display: block; */
+  font-style: italic;
+  color: lightslategray;
+}
+/* pagination */
+.pagination {
+  display: flex;
+  border: 1px solid cornflowerblue;
+  flex-wrap: nowrap;
+  padding: 5px;
+  max-width: 678px;
+}
+.pagination li {
+  list-style: none;
+}
+.pagination a:link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  margin-left: 5px;
+}
+.pagination a:active {
+  color: white;
+}
+.pagination a:hover,
+.selected {
+  background-color: cadetblue;
+  font-size: larger;
+  transform: translateY(-10px);
+  color: white;
+}
+.continuous {
+  transform: translateY(5px);
+  font-weight: bold;
+}
+/* user details page */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content aside {
+  flex-basis: 20%;
+}
+.content aside ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.content aside li {
+  margin-bottom: 10px;
+}
+.content aside li > a:link {
+  text-decoration: none;
+}
+.content section {
+  flex-basis: 80%;
+}
+form {
+  /* display: flexbox; */
+  flex-flow: column;
+}
+form > input {
+  display: block;
+  margin: 10px 0 10px 0;
+  max-width: auto;
+  padding: 10px;
+}
+form #address {
+  min-width: 300px;
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+}
+table th {
+  padding: 10px 5px 10px 5px;
+  background-color: darkgrey;
+  color: white;
+}
+table tr:nth-child(odd) {
+  background-color: lightgray;
+}
+table td {
+  padding: 5px;
+  vertical-align: top;
+}
+.number {
+  text-align: right;
+}

@@ -1,0 +1,19 @@
+extends layout 
+block content 
+  form(action="/users/register", method="post")
+      label(for="name") Name
+      input#name(type="text", name="name")     
+      label(for="email") Email
+      input#email(type="email", name="email")
+      label(for="password") Password 
+      input#password(type="password", name="password") 
+      label(for="birthday") Birthday
+      input#birthday(type="date", name="birthday")
+      label(for="address") Address
+      input#address(type="text", name="address")
+      label(for="phone") Phone 
+      input#phone(type="text", name="phone")
+      select#role(name="role") 
+        option(value="user" selected) User
+        option(value="teacher" ) Teacher
+      input(type="submit", value="Register")
